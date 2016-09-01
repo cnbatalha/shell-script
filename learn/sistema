@@ -2,5 +2,11 @@
 
 # get system info
 
-wd
-f
+echo "system date"
+date
+
+echo "disck partitions"
+df
+
+echo "users"
+w

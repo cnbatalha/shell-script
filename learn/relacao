@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# relacaio entre dois numeros
+# $1 primeiro numero
+# $2 segundo numero
+
+echo $1
+echo $2
+
+if [ "$1" -gt "$2" ]
+then
+	echo "$1 e' maior que $2"
+else		
+	if [ "$2" -gt "$1" ]
+	then
+		echo "$2 e' maior que $1"
+	else
+		echo "$2 e' igual a $1"
+	fi
+fi
+
+
