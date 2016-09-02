@@ -8,4 +8,4 @@
 #	echo "achou"
 # fi
 
-grep -qs $1 $2 && echo "achei"
+echo $2 | grep -qs $1 && echo "achei"

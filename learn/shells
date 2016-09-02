@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# mostra os shells que os usuarios usam sem repetir
+
+cat /etc/passwd | cut -d : -f 7 | sort | uniq
+
+

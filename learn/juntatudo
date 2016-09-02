@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# junta todos os parametros passados
+
+echo $*
+
+echo $* | tr -d ' '
+
+

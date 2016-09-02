@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# apreseta usuario e login
+
+# cut extrai os campos usando o delimitador -d :
+# cut extrai os campos -f 1,5 campos 1 e 5
+# tr substituindo : por TAB
+
+cat /etc/passwd | cut -d : -f 1,5 | tr : '\t'
+
+
