@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# localiza substring
+# recebe dois parametros
+
+# if [ grep -qs $1 $2 ]
+# then
+#	echo "achou"
+# fi
+
+grep -qs $1 $2 && echo "achei"
