@@ -1,12 +1,22 @@
 #!/bin/bash
+# basic script
+# autor: Carlos Nascimento, 28.08.16
+# What do:
+# get user response and show system info
 
-# get system info
+echo "Show system info [s/n]"
+read RESPONSE
+test "$RESPONSE" = "n" && exit
 
-echo "system date"
+# show data system
+echo "Date"
 date
 
-echo "disck partitions"
+# show disck info
+echo "Disck info"
 df
 
-echo "users"
+# show users
+echo "Users"
 w
+

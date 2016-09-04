@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# autor: carlos nascimento, 28.08.16
+# test status file
+
+test -d "$1" && echo "Directory"
+
+ 
