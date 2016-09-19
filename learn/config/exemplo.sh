@@ -17,7 +17,7 @@ while read LINHA; do
 
 	set - $LINHA
 
-	chave=$1
+	chave=$(echo $1 | tr a-z A-Z)
 	shift
 	valor=$*
 
