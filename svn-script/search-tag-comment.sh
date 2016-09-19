@@ -8,6 +8,12 @@ REPOS="$1"
 REV="$2"
 
 # get log repositorio svn
-CHANGELOG=`svnlook log  $REPOS`
+LOG=$(svnlook log  $REPOS)
 
-echo CHANGELOG
+echo $LOG
+
+# verifica se comentario possui a tag [build]
+if echo $LOG | grep -q "build"
+then
+	echo "build project"
+fi

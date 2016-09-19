@@ -3,6 +3,9 @@
 # localiza substring
 # recebe dois parametros
 
+# $1 - substr
+# $2 - string para ser localizada
+
 # if [ grep -qs $1 $2 ]
 # then
 #	echo "achou"
