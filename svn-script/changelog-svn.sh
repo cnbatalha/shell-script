@@ -9,12 +9,24 @@ REPO=$(cut -d : -f 2 repositories)
 # for with repositories list
 for LINHA in $REPO; do
 
+echo "====================================="
+echo "Projeto:" + $LINHA
+
 # getting last review 
 REVIEW=$(svnlook youngest $LINHA)
 
-# show info from review
-echo $(svnlook info -r $REVIEW $LINHA)
+	# loop to view last 5 logs
+	for index in $(seq $((REVIEW-5)) $REVIEW);
+	do
+	
+	echo "$index"
+	# show info from review
+	echo $(svnlook info -r $index $LINHA)
+
+	done
 
 # echo $LINHA
+
+echo "====================================="
 
 done
