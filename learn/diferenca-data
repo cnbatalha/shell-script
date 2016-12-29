@@ -1,0 +1,19 @@
+#!/bash/bin
+
+data_atual=$(date)
+
+echo $data_atual
+
+data_anterior=$(date +%s)
+
+echo $data_anterior
+
+data_repo=$(svnlook date /var/cache/svn/ImpFiscal)
+
+echo $data_repo
+
+data_dif=$(echo $data_repo|grep -P '\d{4}\S\d{2}\S\d{2}' -o)
+
+echo $data_dif
+
+
