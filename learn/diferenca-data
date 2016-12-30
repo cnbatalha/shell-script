@@ -1,19 +1,25 @@
-#!/bash/bin
+#!/bin/bash
 
 data_atual=$(date)
 
 echo $data_atual
 
-data_anterior=$(date +%s)
+# get data autal em segundos
+data_atual_s=$(date +%s)
+echo $data_atual_s
 
-echo $data_anterior
-
-data_repo=$(svnlook date /var/cache/svn/ImpFiscal)
-
+# get data do repositorio
+data_repo=$(svnlook date /var/cache/svn/ProjetosSistematic)
 echo $data_repo
 
+# get data do repositorio apenas dd-mm-yyyy
 data_dif=$(echo $data_repo|grep -P '\d{4}\S\d{2}\S\d{2}' -o)
-
 echo $data_dif
 
+# get data repo em segundos
+data_repo_s=$(date --date $data_dif +%s)
+echo $data_repo_s
+
+# show diferenca em dias
+echo $((($data_atual_s - $data_repo_s)/60/60/24))
 
